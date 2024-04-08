@@ -14,7 +14,7 @@ const KitList = () => {
     {modal.open && extend && (
      <Modal content={<Profile kit={extend} />} />
     )}
-    <div className="p-4 grid grid-cols-5  gap-y-28">
+    <div className="p-4 grid grid-cols-4  gap-y-28">
       {kit.map((kit, index) => (
         <div className="mb-10 h-40 w-40" key={index}>
           <Car src={kit.src} alt={kit.alt} width={kit.width}  id={kit.id.toString()} bg={kit.bg}/>

@@ -16,8 +16,6 @@ interface Params {
 
 const Detail = ({ params }: { params: Params }) => {
   const { id } = params;
-  console.log("ID:", id); // Debugging statement
-
   const [project, setProject] = useState<Project | null>(null);
 
   useEffect(() => {
@@ -30,7 +28,6 @@ const Detail = ({ params }: { params: Params }) => {
           return response.json();
         })
         .then((data) => {
-          console.log("Data:", data); // Debugging statement
           if (data) {
             setProject(data.project);
           } else {
@@ -54,8 +51,6 @@ const Detail = ({ params }: { params: Params }) => {
     <div className="flex flex-col space-y-4 ">
       <Action projectTitle={project.title} />
       <Info />
-     
-      
     </div>
   );
 };
