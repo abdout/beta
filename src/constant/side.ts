@@ -20,21 +20,21 @@ export const item = [
     path: "/daily",
     icon: "ph:file-thin",
   },
+  // {
+  //   title: "Team",
+  //   path: "/team",
+  //   icon: "fluent:person-20-regular",
+  // },
   {
-    title: "Team",
+    title: "Resrc",
     path: "/team",
-    icon: "fluent:person-20-regular",
+    icon: "ph:square-light",
   },
-  {
-    title: "Kit",
-    path: "/kit",
-    icon: "material-symbols-light:square-outline",
-  },
-  {
-    title: "Car",
-    path: "/car",
-    icon: "material-symbols-light:swap-driving-apps-wheel-outline-sharp",
-  },
+  // {
+  //   title: "Car",
+  //   path: "/car",
+  //   icon: "material-symbols-light:swap-driving-apps-wheel-outline-sharp",
+  // },
   // {
   //   title: "Invoice",
   //   path: "/invoice",

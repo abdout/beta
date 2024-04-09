@@ -16,7 +16,6 @@ const SmIcon = (props: {
           height={20}
           alt={props.alt}
           onClick={props.onClick}
-          className=" rounded-full border"
         />
     </Link>
   );

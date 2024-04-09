@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import { Inter } from "next/font/google";
 import "./../globals.css";
 import Side from "@/component/layout/side";
@@ -9,7 +10,7 @@ import { usePathname } from "next/navigation";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
+  const [hovered, setHovered] = useState(false);
   const pathname = usePathname();
   const NoLayout = ['/', '/error', '/password', '/verification', '/join', '/reset']
   if (NoLayout.includes(pathname)) {
@@ -21,15 +22,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <html lang="en">
         <body className={`${inter.className} flex`}>
         <div className="flex w-full h-full">
-        <div className="w-1/5">
-          <Side />
-        </div>
-        <div className="px-8 pt-4 w-4/5 flex flex-col ">
-          <Header />
-         
+          <div 
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            <Side />
+          </div>
+          <div className={`transition-all duration-200 ease-in-out ${hovered ? 'pl-[13rem]' : 'pl-28'} pt-4 flex flex-col `}>
+            {/* <Header /> */}
             {children}
-          
-        </div>
+          </div>
         </div>
         </body>
       </html>

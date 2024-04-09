@@ -52,7 +52,7 @@ const ProjectList: React.FC = () => {
       {projects.map((t: Project) => (
         <div
           key={t._id}
-          className="p-4 border m-2 w-[11rem] flex flex-col items-start hover:border-black relative"
+          className="p-6 border m-5 w-[12rem] flex flex-col items-start  hover:border-black relative"
           onContextMenu={(e) => {
             if (t._id) {
               handleRightClick(e, t._id);
@@ -64,7 +64,7 @@ const ProjectList: React.FC = () => {
               <div>
                 <h1>{t.customer}</h1>
                 <h3>{t.location ? t.location : <span className="opacity-50">Location</span>}</h3>
-                <div className="flex gap-2 items-center">
+                <div className="flex gap-2 items-center mt-1 my-1">
                   <SmIcon src="/profile.png" alt="Profile" path=""/>
                   <h4>Osman</h4>
                 </div>
@@ -94,7 +94,7 @@ const ProjectList: React.FC = () => {
       ))}
 
       <button
-        className="p-4 border m-2  w-[11rem]  flex flex-col items-center justify-center hover:border-black opacity-70 hover:opacity-100"
+        className="p-6 border m-5  w-[12rem]  flex flex-col items-center justify-center hover:border-black opacity-70 hover:opacity-100"
         onClick={() => openModal("")}
       >
         <Icon icon="ph:plus-thin" width={70} />
