@@ -29,6 +29,7 @@ export const item = [
     title: "Resrc",
     path: "/team",
     icon: "ph:square-light",
+    children: ['/team', '/car', '/kit', '/more']
   },
   // {
   //   title: "Car",

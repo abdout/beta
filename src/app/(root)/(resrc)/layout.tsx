@@ -8,7 +8,7 @@ const Layout = (props: {children: ReactNode}) => {
   return (
     <div>
       <Header links={resrc} />
-      <main className="mt-14">
+      <main className="mt-8">
       {props.children}
       </main>
     </div>

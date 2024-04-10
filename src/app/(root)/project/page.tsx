@@ -3,7 +3,7 @@ import React from "react";
 
 const Project = () => {
   return (
-    <div className="grid grid-cols-4 gap-4 mr-16 mt-10">
+    <div className="grid grid-cols-4 gap-4">
       <ProjectList />
     </div>
   );

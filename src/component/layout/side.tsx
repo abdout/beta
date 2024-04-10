@@ -4,7 +4,7 @@ import Item from './item'
 
 const Side = () => {
   return (
-    <div className="fixed h-screen bg-gray-100 transition-all duration-200 ease-in-out w-16 hover:w-[11rem] group">
+    <div className="fixed h-screen mt-[-48px] bg-gray-100 transition-all duration-200 ease-in-out w-16 hover:w-[11rem] group">
       <div className="pl-4 pt-6">
         <Brand />
       </div>

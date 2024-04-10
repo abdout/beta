@@ -1,6 +1,5 @@
 'use client';
 import Navbar from "@/component/docs/layout/navbar";
-import Header from "@/component/project/layout/header";
 import React, { ReactNode } from "react";
 
 
