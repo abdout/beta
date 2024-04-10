@@ -16,7 +16,7 @@ const TeamList = () => {
     {modal.open && extend && (
      <Modal content={<Profile team={extend} />} big={true}/>
     )}
-    <div className="p-4 grid grid-cols-4 gap-y-4 ">
+    <div className="p-4 grid grid-cols-4 gap-24 gap-y-4 ">
       {team.map((team, index) => (
         <div className="mb-10 h-40 w-40" key={index}>
           <Team src={team.src} alt={team.alt} width={team.width}  id={team.id}/>

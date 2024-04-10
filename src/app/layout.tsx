@@ -22,14 +22,14 @@ export default async function RootLayout({
 
   return (
     <MainProvider>
-    <SessionProvider session={session}>
-      <html lang="en">
-        <body className={inter.className}>
-          <Toaster />
-          {children}
-        </body>
-      </html>
-    </SessionProvider>
+      <SessionProvider session={session}>
+        <html lang="en">
+          <body className={`${inter.className} flex overflow-x-hidden`}>
+            <Toaster />
+            {children}
+          </body>
+        </html>
+      </SessionProvider>
     </MainProvider >
   )
 }

@@ -64,12 +64,12 @@ const ProjectList: React.FC = () => {
               <div>
                 <h1>{t.customer}</h1>
                 <h3>{t.location ? t.location : <span className="opacity-50">Location</span>}</h3>
-                <div className="flex gap-2 items-center mt-1 my-1">
-                  <SmIcon src="/profile.png" alt="Profile" path=""/>
+                <div className="flex gap-2 ml-[-6px] items-center mt-2 my-1">
+                <Icon icon="material-symbols-light:bookmark-sharp" width={25}/>
                   <h4>Osman</h4>
                 </div>
-                <div className="flex gap-2 items-center">
-                  <div className="ml-[3px] rounded-full bg-green-600 w-[15px] h-[15px] md:w-3 md:h-3"></div>
+                <div className="flex gap-4 items-center">
+                  <div className="rounded-full bg-green-600 w-[16px] h-[16px] md:w-[14px] md:h-[14px]"></div>
                   <h4 className="md:text-[15px]">Done</h4>
                 </div>
               </div>

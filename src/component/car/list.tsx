@@ -14,7 +14,7 @@ const CarList = () => {
     {modal.open && extend && (
      <Modal content={<Profile car={extend} />} />
     )}
-    <div className="p-4 grid grid-cols-4  gap-y-28">
+    <div className="p-4 w-full grid grid-cols-4  gap-20 gap-y-28">
       {car.map((car, index) => (
         <div className="mb-10 h-40 w-40" key={index}>
           <Car src={car.src} alt={car.alt} width={car.width}  id={car.id} />

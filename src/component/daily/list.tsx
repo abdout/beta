@@ -80,16 +80,16 @@ const DailyList: React.FC = () => {
   </div>
   
   
-  <table className="table-fixed">
+  <table className="table-auto">
     <thead>
       <tr>
-        <td className="text-lg font-medium border-b border-black py-2">Team</td>
-        <td className="text-lg font-medium border-b border-black py-2">Project</td>
-        <td className="text-lg font-medium border-b border-black py-2">Task</td>
-        <td className="text-lg font-medium border-b border-black py-2">Date</td>
-        <td className="text-lg font-medium border-b border-black py-2">Location</td>
-        <td className="text-lg font-medium border-b border-black py-2">Progress</td>
-        <td className="text-lg font-medium border-b border-black py-2">Time</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-40">Team</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-40">Project</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-40">Task</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-36">Date</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-36">Location</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-32">Progress</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-32">Time</td>
       </tr>
     </thead>
     <tbody>
@@ -125,7 +125,7 @@ const DailyList: React.FC = () => {
               </div>
             </td>
             
-            <td className="py-4"><Circle value={task.status} /><span className="ml-2">{task.status}</span></td>
+            <td className="py-4 pl-7"><Circle value={task.status} /></td>
             <td className="py-4">{formattedEstTime}</td>
             <td>
               {/* <Delete id={task._id} />

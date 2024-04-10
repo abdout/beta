@@ -79,17 +79,17 @@ const TaskList: React.FC = () => {
   </div>
   
   
-  <table className="table-auto">
+  <table className="table-auto  ">
     <thead>
       <tr>
-        <td className="text-lg font-medium border-b border-black py-2">Project</td>
-        <td className="text-lg font-medium border-b border-black py-2">Task</td>
-        <td className="text-lg font-medium border-b border-black py-2">Date</td>
-        <td className="text-lg font-medium border-b border-black py-2">Location</td>
-        <td className="text-lg font-medium border-b border-black py-2">Team</td>
-        <td className="text-lg font-medium border-b border-black py-2">Status</td>
-        <td className="text-lg font-medium border-b border-black py-2">Priority</td>
-        <td className="text-lg font-medium border-b border-black py-2">EstTime</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-44">Project</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-32">Task</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-28">Date</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-32">Location</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-40">Team</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-28 justify-center items-center">Status</td>
+        <td className="text-lg font-medium border-b border-black py-2 w-28">Priority</td>
+        <td className="text-lg font-medium border-b border-black py-2 ">Est.</td>
       </tr>
     </thead>
     <tbody>
@@ -132,8 +132,8 @@ const TaskList: React.FC = () => {
                 ))
               )}
             </td>
-            <td className="py-4"><Circle value={task.status} /><span className="ml-2">{task.status}</span></td>
-            <td className="py-4"><Circle value={task.priority} /><span className="ml-2">{task.priority}</span></td>
+            <td className="py-4 pl-5 w-20"><Circle value={task.status} /></td>
+            <td className="py-4 pl-6 w-20"><Circle value={task.priority} /></td>
             <td className="py-4">{formattedEstTime}</td>
             <td>
               {/* <Delete id={task._id} />
