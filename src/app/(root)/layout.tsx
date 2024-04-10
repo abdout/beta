@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <MainProvider>
       <html lang="en">
-        <body className={`${inter.className} flex`}>
+        <body className={`${inter.className} flex overflow-x-hidden`}>
         <div className="flex w-full h-full">
           <div 
             onMouseEnter={() => setHovered(true)}
@@ -28,8 +28,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           >
             <Side />
           </div>
+          
           <div className={`transition-all duration-200 ease-in-out ${hovered ? 'pl-[13rem]' : 'pl-28'} pt-4 flex flex-col `}>
-            {/* <Header /> */}
+          <div className="flex justify-end">
+            <Header />
+          </div>
             {children}
           </div>
         </div>

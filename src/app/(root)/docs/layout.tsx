@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       
-      <main className="">
+      <main className="pt-14">
       <Navbar  />
       {children}
       </main>

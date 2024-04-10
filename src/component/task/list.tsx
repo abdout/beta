@@ -37,6 +37,7 @@ const TaskList: React.FC = () => {
     setSelectedRow(null);
   };
 
+
   const Delete = async (id: string) => {
     const confirmed = window.confirm("Are you sure?");
 
@@ -69,12 +70,12 @@ const TaskList: React.FC = () => {
   return (
     <>
   {modal.open && modal.id === null && <Modal content={<Create />} />}
-  <div className="flex justify-end">
+  <div className="flex justify-start">
     <button
-      className="p-2 m-2 border rounded hover:border-black opacity-70 hover:opacity-100"
+      className="p-1 m-2 border rounded hover:border-black opacity-70 hover:opacity-100"
       onClick={() => openModal(null)}
     >
-      <Icon icon="ph:plus-thin" width={30}/>
+      <Icon icon="ph:plus-thin" width={24}/>
     </button>
   </div>
   
@@ -97,14 +98,14 @@ const TaskList: React.FC = () => {
         const formattedEstTime = task.estTime ? task.estTime.toString().padStart(2, '0') + ' hr' : 'N/A'; // format estTime when displaying it
         return (
           <tr 
-  key={task._id} 
-  className={`border-b ${task._id === selectedRow ? 'bg-black text-[#fcfcfc]' : ''} hover:bg-gray-100`} 
-  onContextMenu={(e) => {
-    if (task._id) {
-      handleRightClick(e, task._id);
-    }
-  }}
->
+            key={task._id} 
+            className={`border-b ${task._id === selectedRow ? 'bg-black bg-opacity-50' : ''} hover:bg-gray-100`} 
+            onContextMenu={(e) => {
+              if (task._id) {
+                handleRightClick(e, task._id);
+              }
+            }}
+          >
             <td className="py-4">{task.project}</td>
             <td className="py-4">{task.title}</td>
             <td className="py-4">{new Date(task.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })}</td>
@@ -148,22 +149,21 @@ const TaskList: React.FC = () => {
         );
       })}
       {contextMenu.taskID && (
-        <div 
-        style={{ top: `${contextMenu.y}px`, left: `${contextMenu.x}px` }} 
-        className="absolute flex flex-col space-y-4 p-8 justify-start items-start bg-white border shadow-lg"
-        onMouseLeave={handleCloseContextMenu}
-          
+        <div
+          style={{ top: `${contextMenu.y}px`, left: `${contextMenu.x}px` }}
+          className="absolute flex flex-col space-y-4 p-8 justify-start items-start bg-white border shadow-lg"
+          onMouseLeave={handleCloseContextMenu}
         >
           <button
-          onClick={() => handleDelete(contextMenu.taskID)}
-          className="flex gap-4 opacity-80 hover:opacity-100"
+            onClick={() => handleDelete(contextMenu.taskID)}
+            className="flex gap-4 opacity-80 hover:opacity-100"
           >
-           <Icon icon="ant-design:delete-outlined" width={30}/>
-           <h3>Delete</h3>
+            <Icon icon="ant-design:delete-outlined" width={30}/>
+            <h3>Delete</h3>
           </button>
-          <button 
-          // onClick={() => handleEdit(contextMenu.taskID)}
-          className="flex gap-4 opacity-80 hover:opacity-100"
+          <button
+            // onClick={() => handleEdit(contextMenu.taskID)}
+            className="flex gap-4 opacity-80 hover:opacity-100"
           >
             <Icon icon="iconoir:edit" width={30}/>
             <h3>Edit</h3>

@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+    <div className="flex justify-center items-center p-4">
     <div className="h-screen flex flex-col justify-between p-4">
       <div className="flex flex-col items-center justify-center flex-grow space-y-1 text-start">
         <h1 className="text-3xl">Databayt</h1>
@@ -43,6 +44,7 @@ export default function Home() {
           />
         </div>
       </div>
+    </div>
     </div>
   );
 }

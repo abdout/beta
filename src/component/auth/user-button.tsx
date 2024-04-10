@@ -1,7 +1,9 @@
 "use client";
 
-import { FaUser } from "react-icons/fa";
+import { FaUser, FaCog, FaUsers, FaIdCard } from "react-icons/fa";
+import Link from 'next/link';
 import { ExitIcon } from "@radix-ui/react-icons"
+import { Icon } from "@iconify/react";
 
 import {
   DropdownMenu,
@@ -25,15 +27,39 @@ export const UserButton = () => {
       <DropdownMenuTrigger>
         <Avatar>
           <AvatarImage src={user?.image || ""} />
-          <AvatarFallback className="bg-sky-500">
-            <FaUser className="text-white" />
+          <AvatarFallback className="bg-black">
+            <Icon icon={"iconamoon:profile-fill"} height="17" color="white" />
           </AvatarFallback>
         </Avatar>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-40" align="end">
+      <DropdownMenuContent className="w-44 mt-2" align="end">
+        <Link href="/profile">
+
+          <DropdownMenuItem>
+            <Icon icon={"iconamoon:profile-thin"} height="25" />
+            Profile
+          </DropdownMenuItem>
+
+        </Link>
+        <Link href="/setting">
+
+          <DropdownMenuItem>
+            <Icon icon={"circum:settings"} height="25" />
+            Setting
+          </DropdownMenuItem>
+
+        </Link>
+        <Link href="/community">
+
+          <DropdownMenuItem>
+            <Icon icon={"ph:circle-thin"} height="25" />
+            Community
+          </DropdownMenuItem>
+
+        </Link>
         <LogoutButton>
           <DropdownMenuItem>
-            <ExitIcon className="h-4 w-4 mr-2" />
+            <Icon icon={"material-symbols-light:logout-rounded"} height="25" />
             Logout
           </DropdownMenuItem>
         </LogoutButton>
@@ -41,3 +67,5 @@ export const UserButton = () => {
     </DropdownMenu>
   );
 };
+
+

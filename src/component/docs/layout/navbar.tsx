@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav ref={node}
     className="flex justify-between pt-1 absolute  top-0 w-full">
-      <ul className="flex space-x-8 p-4">
+      <ul className="flex space-x-8 pt-4">
         {data.map((item, itemIndex) => (
           <li 
             key={itemIndex} 
