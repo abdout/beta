@@ -6,16 +6,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex justify-center items-center p-4">
-    <div className="h-screen flex flex-col justify-between p-4">
-      <div className="flex flex-col items-center justify-center flex-grow space-y-1 text-start">
+    <div className="flex justify-center items-center  mb-8">
+    <div className="h-screen flex flex-col p-8">
+      <div className="flex flex-col items-center justify-center flex-grow text-start mt-[-40px]">
         <h1 className="text-3xl">Databayt</h1>
         <Image className="pb-6" src='/pen.png' width={200} height={200} alt='Pen' />
         <LoginButton asChild>
           <MdButton placeholder="Get started" />
         </LoginButton>
       </div>
-      <div className="flex flex-col items-center space-y-1 text-start pb-4">
+      <div className="flex flex-col items-center space-y-1 text-start ">
         <p className="text-[14px] font-light tracking-wider pb-4">
           To <strong>contribute</strong>, you may track the ongoing development by reviewing the Design, Source
           Code, <br/>Discussion and Roadmap on Figma, GitHub, Discord, and

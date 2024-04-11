@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 import { data } from '@/constant/data';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
@@ -28,7 +27,7 @@ const Navbar = () => {
 
   return (
     <nav ref={node}
-    className="flex justify-between pt-1 absolute  top-0 w-full">
+    className="flex justify-between pt-1 absolute  top-0 w-full z-50">
       <ul className="flex space-x-8 pt-4">
         {data.map((item, itemIndex) => (
           <li 
@@ -59,7 +58,7 @@ const Navbar = () => {
                       
                     </div>
                     {activeSubItem === subitem.subitem && (
-                      <div className="absolute left-full top-0 bg-gray-100 felx flex-col w-full"> {/* Adjusted margin-left */}
+                      <div className="absolute left-full top-0 bg-gray-100 felx flex-col w-full"> 
                         {subitem.activity.map((activity, activityIndex) => (
                           <Link key={activityIndex} href={`/docs/${item.item }/${subitem.subitem}/${activity} `} onClick={() => setActiveItem(null)}>
                             <h4 className="cursor-pointer hover:bg-gray-200 p-[8.7px] px-6 py-[11px] w-full opacity-50 hover:opacity-100">{Abb[activity.toUpperCase()]}</h4>

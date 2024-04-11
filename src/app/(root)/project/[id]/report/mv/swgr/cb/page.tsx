@@ -70,7 +70,7 @@ const CB = ({ params }: { params: Params }) => {
         heightLeft -= pageHeight;
       }
     
-      pdf.save(`${project?.customer} ITP.pdf`);
+      pdf.save(`${project?.customer} Report.pdf`);
     }
   }
 

@@ -1,5 +1,4 @@
 'use client';
-
 import DailyList from '@/component/daily/list';
 import React from 'react'
 

@@ -5,9 +5,8 @@ import ProcedureLayout from '@/component/docs/layout/procedure';
 import { data } from '@/constant/data';
 import { usePathname } from 'next/navigation';
 import { Abb } from '@/constant/abb';
-import SubItem from '../page';
-import MdIcon from '@/component/atom/icon/md';
 import SmIcon from '@/component/atom/icon/sm';
+import { Icon } from "@iconify/react";
 
 const Activity = () => {
   const pathname = usePathname();
@@ -15,7 +14,6 @@ const Activity = () => {
   const item = segments[segments.length - 3];
   const subitem = segments[segments.length - 2];
   const activity = segments[segments.length - 1];
-
 
   const Item = data.find((i) => i.item === item);
   if (!Item) {
@@ -40,17 +38,14 @@ const Activity = () => {
   const Criteria = React.lazy(() => import(`@/component/docs/data/${subitem}/${activity}/criteria`));
 
   return (
-    <div className='flex flex-col items-start gap-4 pl-6 mt-8 w-[70rem]'>
+    <div className='flex flex-col items-start gap-4 w-[57rem] mb-14'>
       <div className='flex gap-4 items-center pb-4'>
         <SmIcon src={`/symbol/${subitem}.png`} alt={subitem} path='' />
       <div>
         <h1>{Abb[subitem.toUpperCase()]}</h1>
         <h1>{Abb[activity.toUpperCase()]}</h1>
       </div>
-
       </div>
-      
-     
       <Suspense fallback={<div>Loading...</div>}>
         <Layout
           definition={<Definition />}
@@ -65,6 +60,10 @@ const Activity = () => {
           criteria={<Criteria />}
         />
       </Suspense>
+      <div className='flex gap-4 opacity-70 hover:opacity-100 transition-opacity duration-200 mt-8'>
+        <Icon icon={"icon-park-solid:edit"} height="25" />
+        <h3>Edit page</h3>
+      </div>
     </div>
   );
 }

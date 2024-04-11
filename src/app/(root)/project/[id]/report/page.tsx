@@ -1,5 +1,6 @@
 'use client';
-import Action from '@/component/project/layout/action';
+
+import Action from '@/component/project/report/action';
 import Level from '@/component/project/report/level';
 import { useProject } from '@/provider/project';
 import React, { useEffect } from 'react'

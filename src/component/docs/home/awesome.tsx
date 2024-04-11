@@ -8,7 +8,7 @@ const Awesome = () => {
             Awesome
         </h1>
         <p className='pt-1 w-[50rem]'>
-            Explore the links below for tutorials, interviews, exams and approvals, respectively.
+            Explore the links below for tutorials, interviews, exams and approvals, respectively.                               
         </p>
         <div className='flex pt-4 gap-8 items-center'>
         <Icon icon={"ri:youtube-fill"} height="75" className="opacity-70 hover:opacity-100 transition-opacity duration-200" />

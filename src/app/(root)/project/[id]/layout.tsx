@@ -1,12 +1,10 @@
 'use client';
 import Header from "@/component/project/layout/header";
-import React, { ReactNode } from "react";
-
-
+import React from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
-  params: any; // Add this line
+  params: any; 
   
 }
 
@@ -14,7 +12,7 @@ const Layout: React.FC<LayoutProps> = ({ children, params}) => {
   return (
     <div>
       <Header params={params} />
-      <main className="mt-10">
+      <main className="mt-4">
       {children}
       </main>
     </div>

@@ -1,19 +1,15 @@
 'use client';
 import Navbar from "@/component/docs/layout/navbar";
-import React, { ReactNode } from "react";
-
-
+import React from "react";
 
 interface LayoutProps {
-  children: React.ReactNode;
-  
+  children: React.ReactNode;  
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div>
-      
-      <main className="pt-14">
+    <div> 
+      <main className="pt-4">
       <Navbar  />
       {children}
       </main>

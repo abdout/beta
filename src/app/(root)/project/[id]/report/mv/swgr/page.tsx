@@ -3,6 +3,7 @@ import { useProject } from "@/provider/project";
 import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
+import Action from "@/component/project/report/action";
 
 interface Params {
   id: string;
@@ -28,6 +29,7 @@ const Swgr = ({ params }: { params: Params }) => {
 
   return (
     <div className="flex flex-col space-y-1 ">
+      <Action projectTitle={project?.customer || ""}  />
       {selectedOptions.map((option: Option) => (
         <Link
           href={`/project/${

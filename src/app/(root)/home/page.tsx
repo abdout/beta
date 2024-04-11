@@ -1,9 +1,11 @@
-import Image from 'next/image'
+import Guide from "@/component/home/guide";
+import Intro from "@/component/home/intro";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="space-y-2">
+      <Intro />
+      <Guide />
     </div>
   )
 }

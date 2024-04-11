@@ -17,13 +17,15 @@ const MOS = ({ params }: { params: Params }) => {
     fetchProject(params.id);
   }, [params.id, fetchProject]);
   const { toPDF, targetRef } = usePDF({
-    filename: `${project?.customer} ITP.pdf`,
+    filename: `${project?.customer} MOS.pdf`,
   });
   return (
     <div className='flex flex-col gap-6 w-[60rem]'>
       <Action projectTitle={project?.customer || ""} toPDF={toPDF} />
+      <div ref={targetRef} className="space-y-6">
       <Intro />
       <ActivityWrapper params={params} />
+      </div>
     </div>
   )
 }

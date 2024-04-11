@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { usePDF } from "react-to-pdf";
-import Action from "@/component/project/layout/action";
+import Action from "@/component/project/report/action";
 import Breadcrumb from "@/component/project/report/layout/crumb";
 
 interface IndexProps {

@@ -3,10 +3,11 @@ import React, { ReactNode } from "react";
 const Pargraph = (props: { 
     title: string,
     desc: ReactNode,
+    sub?: boolean, 
  }) => {
   return (
     <div className="flex-col">
-      <h2 className="bg-yellow-400 px-2 py-[2px] inline-block">{props.title}</h2>
+      <h4 className={props.sub ? "bg-gray-200 px-2 py-[2px] inline-block" : "bg-yellow-400 px-2 py-[2px] inline-block"}>{props.title}</h4>
       <div className="mt-2">
         {props.desc}
       </div>
