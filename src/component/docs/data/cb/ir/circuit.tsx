@@ -12,7 +12,6 @@ const Circuit = () => {
       Stability: Once the connections are made, ensure that they are secure and stable throughout the testing process to avoid fluctuations or interruptions in the test measurements.
       Safety Measures: Follow safety precautions and use personal protective equipment (PPE) when making circuit connections to minimize the risk of electrical shocks or accidents.
       By adhering to these guidelines for circuit connection, you can ensure accurate and reliable insulation resistance testing of circuit breakers, helping to maintain electrical safety and equipment reliability.
-
     </p>
   )
 }
