@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex justify-center items-center  mb-8">
     <div className="h-screen flex flex-col p-8">
       <div className="flex flex-col items-center justify-center flex-grow text-start mt-[-40px]">
-        <h1 className="text-3xl">Databayt</h1>
+        <h1 className="text-3xl">Databayt -test</h1>
         <Image className="pb-6" src='/pen.png' width={200} height={200} alt='Pen' />
         <LoginButton asChild>
           <MdButton placeholder="Get started" />
