@@ -18,7 +18,8 @@ export const publicRoutes = [
   "/kit",
   "/team",
   "/home",
-  "/wallet/timesheet"
+  "/wallet/timesheet",
+  "/wallet/petty"
 
 ];
 
