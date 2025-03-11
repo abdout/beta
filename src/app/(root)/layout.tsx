@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [hovered, setHovered] = useState(false);
   const pathname = usePathname();
-  const NoLayout = ['/', '/error', '/password', '/verification', '/join', '/reset']
+  const NoLayout = [, '/error', '/password', '/verification', '/join', '/reset']
   if (NoLayout.includes(pathname)) {
     return <>{children}</>;
   }

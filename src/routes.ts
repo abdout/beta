@@ -7,6 +7,19 @@ export const publicRoutes = [
   "/",
   "/verification",
   "/readme",
+  "/community",
+  "/daily",
+  "/docs",
+  "/project",
+  "/setting",
+  "/task",
+  "/wallet",
+  "/car",
+  "/kit",
+  "/team",
+  "/home",
+  "/wallet/timesheet"
+
 ];
 
 /**
